@@ -4,7 +4,7 @@
 //#include "/usr/src/minix/servers/pm/pm.h"
 #include "/usr/src/minix/include/minix/ipc.h"
 #include "/usr/src/minix/servers/pm/mproc.h"
-#include "/usr/src/minix/arch/i386/include/archtypes.h"
+#include "/usr/src/minix/kernel/arch/i386/include/archtypes.h"
 #include "/usr/src/minix/kernel/const.h"
 #include "/usr/src/minix/kernel/type.h"
 #include "/usr/src/minix/kernel/proc.h"
