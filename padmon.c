@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 //#include "/usr/src/minix/servers/pm/pm.h"
+#include "/usr/src/usr/src/include/minix/ipc.h"
 #include "/usr/src/minix/servers/pm/mproc.h"
 #include "/usr/src/minix/arch/i386/include/archtypes.h"
 #include "/usr/src/minix/kernel/const.h"
@@ -11,6 +12,7 @@
 #include "/usr/src/minix/servers/vfs/fproc.h"
 #include "/usr/src/minix/servers/vfs/const.h"
 #include "/usr/src/minix/servers/mfs/const.h"
+
 
 void do_printpids();
 
