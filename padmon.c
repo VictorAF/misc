@@ -79,7 +79,7 @@ void do_printpids(){
   //int i = m_in.m1_i1; //pid received. m_in is a global variable
   int c = 0; //Counter
 
-  printf("Searching for children of process: %d \n", i);
+  //printf("Searching for children of process: %d \n", i);
 
   while (c < NR_PROCS)
   {
