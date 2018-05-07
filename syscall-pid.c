@@ -9,6 +9,8 @@ int main(int argc, char **argv) {
     int i = atoi(argv[1]);
     int j = atoi(argv[2]);
 
+    printf("idx: %d, n: %d\n", i, j);
+
     message m;      // Minix uses message to pass parameters to a system call
 
     m.m1_i1 = i;    // set first integer of message to i
