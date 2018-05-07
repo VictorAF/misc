@@ -3,6 +3,14 @@
 #include <string.h>
 //#include "/usr/src/minix/servers/pm/pm.h"
 #include "/usr/src/minix/servers/pm/mproc.h"
+#include "/usr/src/minix/arch/i386/include/archtypes.h"
+#include "/usr/src/minix/kernel/const.h"
+#include "/usr/src/minix/kernel/type.h"
+#include "/usr/src/minix/kernel/proc.h"
+
+#include "/usr/src/minix/servers/vfs/fproc.h"
+#include "/usr/src/minix/servers/vfs/const.h"
+#include "/usr/src/minix/servers/mfs/const.h"
 
 void do_printpids();
 
@@ -82,7 +90,7 @@ void do_printpids(){
       int n = mproc[c].mp_pid; //First process in the list of availableprocess
       //int pinx = mproc[c].mp_parent; //Index of parent of the current process
       //int ppid = mproc[pinx].mp_pid; //pid of parent process
-      print("Proc: %d, PID: %d\n", c, n);
+      printf("Proc: %d, PID: %d\n", c, n);
 
       // if(i == ppid) //If parents pid matches the given value
       // {
