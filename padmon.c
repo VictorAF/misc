@@ -1,17 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 
-#include "/usr/src/minix/kernel/ipc.h"
-#include "/usr/src/minix/servers/pm/mproc.h"
-
-#include "/usr/src/minix/servers/pm/mproc.h"
-
-#include "/usr/src/minix/servers/is/inc.h"
-
-
-void do_printpids();
 
 int main(int argc, char **argv)
 {
@@ -76,31 +66,4 @@ int main(int argc, char **argv)
 
   printf("HELLO PADMON\n");
 	exit(0);
-}
-
-void do_printpids(){
-  //int i = m_in.m1_i1; //pid received. m_in is a global variable
-  int c = 0; //Counter
-
-  //printf("Searching for children of process: %d \n", i);
-
-  while (c < NR_PROCS)
-  {
-      int n = mproc[c].mp_pid; //First process in the list of availableprocess
-      //int pinx = mproc[c].mp_parent; //Index of parent of the current process
-      //int ppid = mproc[pinx].mp_pid; //pid of parent process
-      printf("Proc: %d, PID: %d\n", c, n);
-
-      // if(i == ppid) //If parents pid matches the given value
-      // {
-      //   printf("%d \n", n); //Print the childs id
-      //   c++;
-      // }
-      // else
-      // {
-      //   c++;
-      // }
-      c++;
-  }
-  return;
 }
