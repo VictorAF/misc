@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "/usr/src/minix/servers/pm/pm.h"
+//#include "/usr/src/minix/servers/pm/pm.h"
 #include "/usr/src/minix/servers/pm/mproc.h"
 
 void do_printpids();
@@ -41,9 +41,9 @@ int main(int argc, char **argv)
   }
   else if (strcmp(argv[1], "-r") == 0){
 
-    print("Printing PIDS:\n");
+    printf("Printing PIDS:\n");
     do_printpids();
-    print("Printing PIDS Done\n");
+    printf("Printing PIDS Done\n");
 
   }
   else if (strcmp(argv[1], "-s") == 0){
