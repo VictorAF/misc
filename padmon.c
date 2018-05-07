@@ -1,17 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//#include "/usr/src/minix/servers/pm/pm.h"
-#include "/usr/src/minix/include/minix/ipc.h"
+#include <unistd.h>
+
 #include "/usr/src/minix/servers/pm/mproc.h"
-//#include "/usr/src/minix/kernel/arch/i386/include/archtypes.h"
-// #include "/usr/src/minix/kernel/const.h"
-// #include "/usr/src/minix/kernel/type.h"
-// #include "/usr/src/minix/kernel/proc.h"
-//
-// #include "/usr/src/minix/servers/vfs/fproc.h"
-// #include "/usr/src/minix/servers/vfs/const.h"
-// #include "/usr/src/minix/servers/mfs/const.h"
+
+#include "/usr/src/minix/servers/is/inc.h"
 
 
 void do_printpids();
@@ -82,7 +76,7 @@ int main(int argc, char **argv)
 }
 
 void do_printpids(){
-  int i = m_in.m1_i1; //pid received. m_in is a global variable
+  //int i = m_in.m1_i1; //pid received. m_in is a global variable
   int c = 0; //Counter
 
   printf("Searching for children of process: %d \n", i);
