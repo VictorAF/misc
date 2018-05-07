@@ -3,6 +3,9 @@
 #include <string.h>
 #include <unistd.h>
 
+#include "/usr/src/minix/kernel/ipc.h"
+#include "/usr/src/minix/servers/pm/mproc.h"
+
 #include "/usr/src/minix/servers/pm/mproc.h"
 
 #include "/usr/src/minix/servers/is/inc.h"
