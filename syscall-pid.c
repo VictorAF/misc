@@ -16,6 +16,7 @@ int main(int argc, char **argv) {
     m.m1_i1 = i;    // set first integer of message to i
     m.m1_i2 = j;
 
+
     _syscall(PM_PROC_NR, PRINTPPIDS, &m);
         /* _syscall leads to the system server identified by PM_PRO_NR (the PM
          * server process) invoking the function identified by call number

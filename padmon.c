@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include <lib.h>    // provides _syscall and message
 
 int main(int argc, char **argv)
 {
+  int ans = 0;
   if (strcmp(argv[1], "-help") == 0){
 
     printf("------------------------------------\n");
@@ -22,48 +24,18 @@ int main(int argc, char **argv)
   }
   else if (strcmp(argv[1], "-ps") == 0){
 
-    // struct kinfo pinf;
-    // int num_procs;
-    //
-    // getsysinfo(PM_PROC_NR, SI_KINFO, &pinf);
-    //
-    // num_procs = pinf.nr_pro;
+    message m;      // Minix uses message to pass parameters to a system call
+
+    m.m1_i1 = 0;    // set first integer of message to i
+    m.m1_i2 = 0;
 
     printf("----------------------\n");
     printf(" PID/EndPoint   State\n");
     printf("----------------------\n");
-    //printf(" %.3d            %c\n", test, test2);
-    printf("%d\n", 10);
+    _syscall(PM_PROC_NR, PRINTPPIDS, &m);
+    printf("----------------------\n");
 
   }
-  else if (strcmp(argv[1], "-r") == 0){
-
-    printf("Printing PIDS:\n");
-    do_printpids();
-    printf("Printing PIDS Done\n");
-
-  }
-  else if (strcmp(argv[1], "-s") == 0){
-
-
-  }
-  else if (strcmp(argv[1], "-t") == 0){
-
-
-  }
-  else if (strcmp(argv[1], "-z") == 0){
-
-
-  }
-  else if (strcmp(argv[1], "-e") == 0){
-
-
-  }
-  else if (strcmp(argv[1], "-v") == 0){
-
-
-  }
-
-  printf("HELLO PADMON\n");
+  //printf("HELLO PADMON\n");
 	exit(0);
 }
