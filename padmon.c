@@ -7,6 +7,8 @@
 int main(int argc, char **argv)
 {
   int ans = 0;
+  freopen ("output.txt","w",stdout);
+
   if (strcmp(argv[1], "-help") == 0){
 
     printf("------------------------------------\n");
@@ -37,5 +39,6 @@ int main(int argc, char **argv)
 
   }
   //printf("HELLO PADMON\n");
+  fclose(stdout);
 	exit(0);
 }
