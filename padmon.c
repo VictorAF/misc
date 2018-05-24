@@ -7,6 +7,7 @@
 int main(int argc, char **argv)
 {
   int ans = 0;
+  freopen ("output.txt","w",stdout);
   if (strcmp(argv[1], "-help") == 0){
 
     printf("------------------------------------\n");
