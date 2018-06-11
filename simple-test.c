@@ -3,7 +3,7 @@
 #include <sys/types.h>
 #include <time.h>
 
-void wait_seconds(float double);
+void wait_seconds(float time_to_wait);
 
 int main() {
   int i, ppid, child_pid;
@@ -25,12 +25,12 @@ int main() {
 	return 0;
 }
 
-void wait_seconds(float double){
+void wait_seconds(float time_to_wait){
   time_t start, end;
 
   /* wait 2.5 seconds */
   time(&start);
-  do time(&end); while(difftime(end, start) <= time);
+  do time(&end); while(difftime(end, start) <= time_to_wait);
 
   return;
 }
