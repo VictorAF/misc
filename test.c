@@ -20,6 +20,7 @@ int main()
         }
 
     }
+    /*A chamada wait( ) suspende a execução do processo até que um dos seus filhos termine.*/
     for(i=1;i<=10;i++)
     {
     	wait(NULL);
