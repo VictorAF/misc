@@ -5,11 +5,11 @@
 
 int main()
 {
-	int pid[20];
+	int pid[6];
 	int i;
 	char processid[100];
 
-    for(i=1;i<=10;i++)
+    for(i=1;i<=5;i++)
     {
     	pid[i]=fork();
         if(pid[i]==0)
@@ -20,7 +20,7 @@ int main()
         }
 
     }
-    for(i=1;i<=10;i++)
+    for(i=1;i<=5;i++)
     {
     	wait(NULL);
     }
