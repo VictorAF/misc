@@ -14,11 +14,17 @@ int main() {
   child_pid = fork();
 
   if(child_pid == 0){
-    for(i = 0; i < 10000000000000; i++);
+    i = 0;
+    while(i < 100000){
+      i++;
+    }
     printf("Finishing pid: %d\n", getpid());
   }
   else{
-    for(i = 0; i < 1000000000000000; i++);
+    i = 0;
+    while(i < 10000000){
+      i++;
+    }
     printf("Finishing pid: %d, parent of pid: %d\n", ppid, child_pid);
 
   }
