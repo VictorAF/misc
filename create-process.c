@@ -6,7 +6,7 @@
 void wait_seconds(float time_to_wait);
 
 int main() {
-  int proc, g_proc, ppid
+  int proc, g_proc, ppid;
 
   printf("Init pid: %d\n", getpid());
   proc = fork();
@@ -15,8 +15,7 @@ int main() {
     printf("Get pid: %d\n", getpid());
 		g_proc = fork();
     printf("Get2 pid: %d\n", getpid());
-		if (g_proc == 0) {
-			printf("Processo 1\n");
+a			printf("Processo 1\n");
       printf("Finishing pid: %d\n", getpid());
 
 		} else {
