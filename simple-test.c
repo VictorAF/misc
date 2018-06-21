@@ -14,12 +14,12 @@ int main() {
   child_pid = fork();
 
   if(child_pid == 0){
-    wait_seconds(2.5);
+    //wait_seconds(2.5);
     printf("Finishing pid: %d\n", getpid());
     printf("OLHA: %d\n", f);
   }
   else{
-    wait_seconds(3.0);
+    //wait_seconds(3.0);
     printf("Finishing pid: %d, parent of pid: %d\n", ppid, child_pid);
   }
 
