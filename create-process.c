@@ -16,19 +16,19 @@ int main() {
 		g_proc = fork();
 		if (g_proc == 0) {
 			printf("Processo 1\n");
-      printf("Finishing pid: %d\n", getpid());
+      //printf("Finishing pid: %d\n", getpid());
 
 		} else {
 			//RETIRE O COMENTÁRIO DA LINHA ABAIXO PARA TESTAR STARVATION
 			//wait4(g_proc, NULL, 0, NULL);
 			printf("Processo 2\n");
-      printf("Finishing pid: %d\n", getpid());
+      //printf("Finishing pid: %d\n", getpid());
 			}
 	} else{
 		printf("Processo 3\n");
-    printf("Finishing pid: %d\n", getpid());
-	}
 
+	}
+  printf("Finishing pid: %d\n", getpid());
   return 0;
 }
 
