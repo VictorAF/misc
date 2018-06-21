@@ -14,7 +14,6 @@ int main() {
 	if(proc == 0){
     printf("Get pid: %d\n", getpid());
 		g_proc = fork();
-    printf("Get 2 pid: %d\n", getpid());
 		if (g_proc == 0) {
 			printf("Processo 1\n");
       printf("Finishing pid: %d\n", getpid());
